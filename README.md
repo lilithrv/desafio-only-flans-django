@@ -4,7 +4,7 @@ The website is created with Django and Bootstrap and its objective is to show th
 
 ## Dependencies
 
-- [Django](https://expressjs.com/es/) 3.2.4 version
+- [Django](https://www.djangoproject.com/) 3.2.4 version
 - Requirements specified in requirements.txt file
 
 ## To visualize the project
