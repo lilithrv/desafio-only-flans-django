@@ -24,7 +24,7 @@ source nombre_entorno/Scripts/activate
 - Install Django 3.2.4
 
 ```python
-pip install django==3.24
+pip install django==3.2.4
 ```
 
 - Server up
