@@ -1,0 +1,32 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block contenido %}
+<div>
+    <section id="highlights" class="py-5 container">
+        <hr>
+        <h2 class="text-center">PRODUCTOS</h2>
+        <hr>
+        <div class="container pt-3">
+            <div class="row">
+                {% for flan in flanes %}
+                <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+                    <div class="card my-3">
+                        <div class="position-relative">
+                            <img src="{{flan.image_url}}" class="card-img-top" alt="{{flan.slug}}">
+                            <span
+                                class="categoria-badge position-absolute top-0 end-0 bg-dark text-white p-1 m-2">${{flan.price}}</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{flan.name}}</h5>
+                            <p class="card-text text-justify">{{flan.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

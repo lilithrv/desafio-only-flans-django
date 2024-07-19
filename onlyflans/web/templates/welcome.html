@@ -1,0 +1,35 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block contenido %}
+<div class="container py-5" id="welcome">
+    <hr>
+    <h2 class="text-center">BIENVENIDA</h2>
+    <hr>
+    <div class="container pt-3">
+        <p class="text-center">Hola <strong>{{user.get_username}}</strong> 👋, te damos la más cordial bienvenida a
+            nuestro sitio!</p>
+        <p class="text-center"> Te invitamos a disfrutar de nuestras ofertas y productos exclusivos que tenemos
+            para
+            ti.</p>
+        <hr>
+        <div class=" row pt-2">
+            {% for flan in flanes_privados %}
+            <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="card my-3">
+                    <div class="position-relative">
+                        <img src="{{flan.image_url}}" class="card-img-top" alt="{{flan.slug}}">
+                        <span
+                            class="categoria-badge position-absolute top-0 end-0 bg-dark text-white p-1 m-2">${{flan.price}}</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{flan.name}}</h5>
+                        <p class="card-text text-justify">{{flan.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
