@@ -1,6 +1,6 @@
 # Entornos virtuales
 vonlyflans/
-.env/
+.env
 
 # Python bytecode
 __pycache__/
@@ -8,8 +8,6 @@ __pycache__/
 *.pyo
 *.pyd
 
-# SQLite database
-*.sqlite3
 
 # Log files
 *.log
@@ -23,9 +21,6 @@ __pycache__/
 
 # Django migration files
 migrations/
-
-# Node modules (if using Node.js)
-node_modules/
 
 # Compiled static files
 staticfiles/
